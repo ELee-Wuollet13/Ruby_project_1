@@ -7,7 +7,7 @@ describe(Anagram) do
     it('check if word is an Anagram') do
       test = Anagram.new("beard", "bread")
       puts "test"
-      expect(test.find_ana).to(eq(true))
+      expect(test.find_ana?).to(eq(true))
     end
   end
 end
