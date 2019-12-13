@@ -1,5 +1,5 @@
 require('rspec')
-require('anagram')
+require('find_ana')
 
 
 describe(Anagram) do
