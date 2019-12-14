@@ -7,11 +7,12 @@ class Anagram
 
   end
   def find_ana?()
+    inputA.gsub!(/[^0-9A-Za-z]/, '')
+    inputB.gsub!(/[^0-9A-Za-z]/, '')
     ana_counter = 0
-    string = inputA.downcase.split("")
+    string = @inputA.downcase.split("")
     string.each do |chr|
-
-      if inputB.downcase.include?(chr)
+      if @inputB.downcase.include?(chr)
         puts "yes"
         ana_counter += 1
         puts ana_counter

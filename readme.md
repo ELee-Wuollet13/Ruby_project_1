@@ -12,7 +12,7 @@ _ _
 |---|---|---|
 | Find a anagram | Bread, Beard | True |
 | Find a anagram in spite of capitalization | Slip, Lisp | True |
-| Find an input is a word | f4lze! | false |
+| Find an input is a word | f4lz! | false |
 | Find if a non-anagram is an 'antigram' | class, blue | True |
 | Check multiple words for anigrams and 'antigrams' | Church of Scientology, rich chosen goofy cult | True |
 ## Setup/Installation Requirements
