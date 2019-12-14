@@ -1,14 +1,13 @@
 class Anagram
   attr_reader(:inputA, :inputB)
-  attr_writer(:ana_counter)
+  attr_writer(:ana_counter, :result)
   def initialize(inputA, inputB)
     @inputA = inputA
     @inputB = inputB
 
   end
   def find_ana?()
-    inputA.gsub!(/[^0-9A-Za-z]/, '')
-    inputB.gsub!(/[^0-9A-Za-z]/, '')
+
     ana_counter = 0
     string = @inputA.downcase.split("")
     string.each do |chr|
@@ -21,14 +20,14 @@ class Anagram
 
       end
     end
-    if ana_counter === @inputA.length()
-      return true
+    if ana_counter ==! @inputA.length()
+      @result =false
     elsif ana_counter === 0
-      return "anti_true"
+      puts  ana_counter
+      @result = "anti_true"
     else
-      false
+      @result = true
     end
-
+return @result
   end
-
 end
