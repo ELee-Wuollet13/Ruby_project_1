@@ -8,9 +8,9 @@ class Anagram
   end
   def find_ana?()
     ana_counter = 0
-    string = inputA.split("")
+    string = inputA.downcase.split("")
     string.each do |chr|
-      if inputB.include?(chr)
+      if inputB.downcase.include?(chr)
         puts "yes"
         ana_counter += 1
         puts ana_counter
