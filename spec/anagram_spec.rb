@@ -12,10 +12,17 @@ describe(Anagram) do
   end
 
   describe('#initialize') do
-    it('check if word is an Anagram') do
+    it('check if word is an Anagram despite case') do
       test = Anagram.new("BEard", "bread")
       puts "test"
       expect(test.find_ana?).to(eq(true))
+    end
+  end
+  describe('#initialize') do
+    it('check if word is an Antigram') do
+      test = Anagram.new("six", "zen")
+      puts "test"
+      expect(test.find_ana?).to(eq("anti_true"))
     end
   end
 end

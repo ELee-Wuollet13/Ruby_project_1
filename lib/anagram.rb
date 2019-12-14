@@ -10,6 +10,7 @@ class Anagram
     ana_counter = 0
     string = inputA.downcase.split("")
     string.each do |chr|
+
       if inputB.downcase.include?(chr)
         puts "yes"
         ana_counter += 1
@@ -21,8 +22,10 @@ class Anagram
     end
     if ana_counter === @inputA.length()
       return true
+    elsif ana_counter === 0
+      return "anti_true"
     else
-      return false
+      false
     end
 
   end
