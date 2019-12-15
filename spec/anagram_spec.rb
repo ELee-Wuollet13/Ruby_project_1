@@ -5,7 +5,7 @@ require('Anagram')
 describe(Anagram) do
   describe('#initialize') do
     it('test1 check if word is an Anagram') do
-      test = Anagram.new("bread", "beerd")
+      test = Anagram.new("bread", "beard")
       puts "test1"
       expect(test.find_ana?).to(eq(true))
     end

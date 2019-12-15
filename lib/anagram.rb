@@ -30,10 +30,10 @@ class Anagram
     end
     if ana_counter === 0
       @result = "anti_true"
-    elsif ana_counter != @inputB.length()
+    elsif ana_counter / inputA.length() != @inputB.length()
       @result = false
       puts  ana_counter
-    elsif ana_counter === @inputB.length()
+    elsif ana_counter / inputA.length() === @inputB.length()
       @result = true
     end
     puts @result
