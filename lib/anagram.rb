@@ -24,14 +24,15 @@ class Anagram
 
       end
     end
-    if ana_counter ==! @inputA.length()
-      @result =false
+    if ana_counter != @inputB.length()
+      @result = false
     elsif ana_counter === 0
       puts  ana_counter
       @result = "anti_true"
-    else
+    elsif ana_counter === @inputB.length()
       @result = true
     end
-return @result
+    puts @result
+   return @result
   end
 end
