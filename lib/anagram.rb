@@ -7,6 +7,10 @@ class Anagram
 
   end
   def find_ana?()
+    if @inputA.length != @inputB.length()
+      return "not an Anagram"
+    end
+
 
     ana_counter = 0
     string = @inputA.downcase.split("")
