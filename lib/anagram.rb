@@ -13,11 +13,11 @@ class Anagram
 
 
   def find_ana?()
-    # vowel_array = "a"
+    vowel_array = ["a", "e", "i", "o", "o", "u", "y"]
     if @inputA.length != @inputB.length()
       return "not an Anagram"
-    # elsif @inputA.exclude?(vowel_array) | @inputB.exclude?(vowel_array)
-    #   return "enter a real word"
+    elsif @inputA.include?(vowel_array.fetch) | @inputB.include?(vowel_array.fetch)
+      return "enter a real word"
 
     end
 
