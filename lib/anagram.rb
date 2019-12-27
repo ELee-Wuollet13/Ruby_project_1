@@ -16,7 +16,7 @@ class Anagram
     vowel_array = ["a", "e", "i", "o", "o", "u", "y"]
     if @inputA.length != @inputB.length()
       return "not an Anagram"
-    elsif @inputA.include?(vowel_array.fetch) | @inputB.include?(vowel_array.fetch)
+    elsif @inputA != @inputB
       return "enter a real word"
 
     end
