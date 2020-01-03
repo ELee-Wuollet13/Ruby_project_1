@@ -41,7 +41,7 @@ describe(Anagram) do
   end
   describe('#initialize') do
     it('check if word is an Anagram despite nonletters') do
-      test = Anagram.new("Beard","B4rea@d")
+      test = Anagram.new("Church of Scientology", "rich chosen goofy cult")
       puts "test6"
       expect(test.find_ana?).to(eq(true))
     end
