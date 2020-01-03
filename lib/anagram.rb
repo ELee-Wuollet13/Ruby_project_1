@@ -7,38 +7,38 @@ class Anagram
   end
 
   def find_ana?()
-    vowel_array = ["a", "e", "i", "o", "o", "u", "y"]
-    if @inputA.length != @inputB.length()
-      return "not an Anagram"
+    # vowel_array = ["a", "e", "i", "o", "o", "u", "y"]
+    if @inputA.include?("a,e,i,o,u") | @inputB.include?("a,e,i,o,u")
+      puts "real word"
     end
+      if @inputA.length != @inputB.length()
+        return "not an Anagram"
+      end
 
-    ana_counter = 0
+      ana_counter = 0
 
-    stringB = @inputB.downcase.split("")
-    stringB.each do |chr|
-      if @inputA.downcase.include?(chr)
-        stringA = @inputA.downcase.split("")
-        stringA.each do |chr|
-          if @inputB.downcase.include?(chr)
-            puts "yes"
-            ana_counter += 1
-            puts ana_counter
-          else
-            puts "no"
-
+      stringB = @inputB.downcase.split("")
+      stringB.each do |chr|
+        if @inputA.downcase.include?(chr)
+          stringA = @inputA.downcase.split("")
+          stringA.each do |chr|
+            if @inputB.downcase.include?(chr)
+              # puts "yes"
+              ana_counter += 1
+              # puts ana_counter
+            end
           end
         end
       end
-    end
-    if ana_counter === 0
-      @result = "anti_true"
-    elsif ana_counter / inputA.length() != @inputB.length()
-      @result = false
-      puts  ana_counter
-    elsif ana_counter / inputA.length() === @inputB.length()
-      @result = true
-    end
-    puts @result
-    return @result
+      if ana_counter === 0
+        @result = "anti_true"
+      elsif ana_counter / inputA.length() != @inputB.length()
+        @result = false
+        # puts  ana_counter
+      elsif ana_counter / inputA.length() === @inputB.length()
+        @result = true
+      end
+      # puts @result
+      return @result
   end
 end
