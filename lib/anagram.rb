@@ -2,14 +2,16 @@ class Anagram
   attr_reader(:inputA, :inputB)
   attr_writer(:ana_counter, :result)
   def initialize(inputA, inputB)
-    @inputA = inputA
-    @inputB = inputB
+    @inputA = inputA.downcase.gsub(/([^a-z])/, "")
+    @inputB = inputB.downcase.gsub(/([^a-z])/, "")
   end
 
   def find_ana?()
     # vowel_array = ["a", "e", "i", "o", "o", "u", "y"]
-    if @inputA.include?("a,e,i,o,u") | @inputB.include?("a,e,i,o,u")
+    if @inputA[/(['aeiou'])/] && @inputB[/(['aeiou'])/]
       puts "real word"
+    else
+      return "not a real word"
     end
       if @inputA.length != @inputB.length()
         return "not an Anagram"
@@ -17,10 +19,10 @@ class Anagram
 
       ana_counter = 0
 
-      stringB = @inputB.downcase.split("")
+      stringB = @inputB.split("")
       stringB.each do |chr|
         if @inputA.downcase.include?(chr)
-          stringA = @inputA.downcase.split("")
+          stringA = @inputA.split("")
           stringA.each do |chr|
             if @inputB.downcase.include?(chr)
               # puts "yes"

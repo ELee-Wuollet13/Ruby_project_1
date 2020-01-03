@@ -39,4 +39,11 @@ describe(Anagram) do
       expect(test.find_ana?).to(eq(true))
     end
   end
+  describe('#initialize') do
+    it('check if word is an Anagram despite nonletters') do
+      test = Anagram.new("Beard","B4rea@d")
+      puts "test6"
+      expect(test.find_ana?).to(eq(true))
+    end
+  end
 end
