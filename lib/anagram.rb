@@ -7,7 +7,6 @@ class Anagram
   end
 
   def find_ana?()
-    # vowel_array = ["a", "e", "i", "o", "o", "u", "y"]
     if @inputA[/(['aeiou'])/] && @inputB[/(['aeiou'])/]
       puts "real word"
     else
@@ -25,9 +24,7 @@ class Anagram
           stringA = @inputA.split("")
           stringA.each do |chr|
             if @inputB.downcase.include?(chr)
-              # puts "yes"
               ana_counter += 1
-              # puts ana_counter
             end
           end
         end
@@ -36,11 +33,9 @@ class Anagram
         @result = "anti_true"
       elsif ana_counter / inputA.length() != @inputB.length()
         @result = false
-        # puts  ana_counter
       elsif ana_counter / inputA.length() === @inputB.length()
         @result = true
       end
-      # puts @result
       return @result
   end
 end
