@@ -6,38 +6,35 @@ class Anagram
     @inputB = inputB.downcase.gsub(/([^a-z])/, "")
   end
 
-  def is_word()
+  def find_ana()
     if @inputA[/(['aeiou'])/] && @inputB[/(['aeiou'])/]
     else
       return "not a real word"
     end
-  end
+      if @inputA.length != @inputB.length()
+        return "not an Anagram"
+      end
 
-  def is_length
-    if @inputA.length != @inputB.length()
-      return "not an Anagram"
-    end
-  end
+      ana_counter = 0
 
-  def find_ana()
-    ana_counter = 0
-
-    @stringB.split("").each do |chr|
-      if @inputA.downcase.include?(chr)
-        @stringA.split("").each do |chr|
-          if @inputB.downcase.include?(chr)
-            ana_counter += 1
+      stringB = @inputB.split("")
+      stringB.each do |chr|
+        if @inputA.downcase.include?(chr)
+          stringA = @inputA.split("")
+          stringA.each do |chr|
+            if @inputB.downcase.include?(chr)
+              ana_counter += 1
+            end
           end
         end
       end
-    end
-    if ana_counter === 0
-      @result = "anti_true"
-    elsif ana_counter / inputA.length() != @inputB.length()
-      @result = false
-    elsif ana_counter / inputA.length() === @inputB.length()
-      @result = true
-    end
-    return @result
+      if ana_counter === 0
+        @result = "anti_true"
+      elsif ana_counter / inputA.length() != @inputB.length()
+        @result = false
+      elsif ana_counter / inputA.length() === @inputB.length()
+        @result = true
+      end
+      return @result
   end
 end
